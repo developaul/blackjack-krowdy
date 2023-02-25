@@ -1,6 +1,10 @@
-const btnNuevoJuego = document.querySelector('#btnNuevoJuego')
+const btnNuevoJuego = document.querySelector('#btnNuevoJuego'),
+  btnPedirCarta = document.querySelector('#btnPedirCarta'),
+  btnDetener = document.querySelector('#btnDetener')
+
 
 let baraja = []
+let puntosDeJugadores = []
 
 /**
  * C = Treboles
@@ -16,12 +20,12 @@ const crearBaraja = () => {
   baraja = []
 
   for(let tipo of tipos) {
-
     for(let i = 2; i <= 10; i++) baraja.push(i + tipo)
 
+    for(let especial of especiales) baraja.push(especial + tipo)
   }
 
-  return baraja
+  return _.shuffle(baraja) 
 }
 
 
@@ -29,8 +33,16 @@ const init = (cantidadJugadores = 2) => {
   
   baraja = crearBaraja()
 
-  console.log("🚀 ~ file: scripts.js:31 ~ init ~ baraja:", baraja)
+  for(let i = 0; i < cantidadJugadores; i++) {
+    puntosDeJugadores.push(0)
+  }
+  
+  habilitarBotones()
+}
 
+const habilitarBotones = () => {
+  btnPedirCarta.disabled = false
+  btnDetener.disabled = false
 }
 
 btnNuevoJuego.addEventListener('click', () => {

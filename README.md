@@ -3,6 +3,9 @@
 2. Lograr darle estilos con CSS -> Completado
 3. Lograr que funcione con JS
   3.1 Funcionalidad "Nuevo Juego"
-    - Generar baraja
-    - Habilitar opciones de pedir cartas o detenerse
+    - Generar baraja -> Completado
+    - Habilitar opciones de "pedir cartas" o "detenerse" -> Completado
+    - Generar puntos de jugadores
+  3.2 Funcionalidad "Pedir Carta"
+  3.3 FUncionalidad "Detener"
 4. Desplegarlo en github pages

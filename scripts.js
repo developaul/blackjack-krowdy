@@ -45,6 +45,36 @@ const habilitarBotones = () => {
   btnDetener.disabled = false
 }
 
+const obtenerCarta = () => { 
+  if(baraja.length <= 0) throw "No hay cartas en la baraja"
+
+  return baraja.pop()
+}
+
+const obtenerValorDeCarta = (carta) => {
+  console.log("🚀 ~ file: scripts.js:55 ~ obtenerValorDeCarta ~ carta:", carta)
+
+
+  // const valor = 
+
+
+}
+
+const acumularPuntos = ({carta, turno}) => {
+  const valorDeCarta = obtenerValorDeCarta(carta)
+
+
+  // puntosDeJugadores[turno] = puntosDeJugadores[turno] + 
+
+}
+
 btnNuevoJuego.addEventListener('click', () => {
   init()
+})
+
+btnPedirCarta.addEventListener('click', () => {
+  const carta = obtenerCarta()
+
+  acumularPuntos({ carta, turno: 0 })
+
 })

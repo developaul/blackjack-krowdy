@@ -17,4 +17,4 @@
   3.3 Funcionalidad "Detener"
     - Deshabilitar botones -> Completado
     - Ejecutar funcion turnoComputadora -> Completado
-4. Desplegarlo en github pages
+4. Desplegarlo en github pages -> Completado
